@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Scorer
+  - Skyscraper
+  - Place
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 434546049
+    locked: 0
+  - name: Skyscraper
+    uniqueID: 3305005593
+    locked: 0
+  - name: Place
+    uniqueID: 2482359947
+    locked: 0
+  - name: Canvas
+    uniqueID: 1116091911
+    locked: 0
+  - name: Plane
+    uniqueID: 2833781119
+    locked: 0
