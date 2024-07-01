@@ -10,10 +10,12 @@ public class PlayerScripts : MonoBehaviour
     Rigidbody2D rb;
     public Text scoreText;
     public Text deadScoreText;
-    public float score;
+    public int score;
     public float deadScore;
     public GameObject DeadScene;
     public GameObject Message;
+    public GameObject HighScoreText;
+    public GameObject HighScore;
 
 
     void Start()
@@ -23,6 +25,8 @@ public class PlayerScripts : MonoBehaviour
         deadScore = 0;
         DeadScene.SetActive(false);
         Message.SetActive(true);
+        HighScoreText.SetActive(true);
+        HighScore.SetActive(true);
         Time.timeScale = 0;
     }
 
@@ -33,12 +37,18 @@ public class PlayerScripts : MonoBehaviour
             rb.velocity = Vector2.up * jumpingFre;
             Time.timeScale = 1;
             Message.SetActive(false);
+            HighScoreText.SetActive(false);
+            HighScore.SetActive(false);
         }
 
         scoreText.text = score.ToString();
         deadScoreText.text = score.ToString();
 
-
+        if (score > PlayerPrefs.GetInt("HighScore"))
+        {
+            PlayerPrefs.SetInt("HighScore", score);
+        }
+        
     }
 
     void OnTriggerEnter2D(Collider2D temas)
@@ -57,12 +67,14 @@ public class PlayerScripts : MonoBehaviour
             SoundManager.instance.skyscraperSource.PlayOneShot(SoundManager.instance.CrashSound);
             Time.timeScale = 0;
             DeadScene.SetActive(true);
+            Destroy(gameObject);
         }
         if (temas.gameObject.tag == "Place")
         {
             SoundManager.instance.skyscraperSource.PlayOneShot(SoundManager.instance.CrashSound);
             Time.timeScale = 0;
              DeadScene.SetActive(true);
+            Destroy(gameObject);
         }
     }
 }

@@ -14,7 +14,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Background
   - 
   - 
   - 
@@ -50,11 +50,14 @@ TagManager:
   - name: Skyscraper
     uniqueID: 3305005593
     locked: 0
+  - name: Canvas
+    uniqueID: 1116091911
+    locked: 0
   - name: Place
     uniqueID: 2482359947
     locked: 0
-  - name: Canvas
-    uniqueID: 1116091911
+  - name: TextCanvas
+    uniqueID: 1458098639
     locked: 0
   - name: Plane
     uniqueID: 2833781119
